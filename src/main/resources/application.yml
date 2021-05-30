@@ -1,0 +1,18 @@
+server:
+  # application server port
+  port: 1881
+
+spring:
+  application:
+    name: vocabulary-manage-platform
+  datasource:
+    name: vocabulary
+    url: jdbc:mysql://127.0.0.1:3306/vocabulary?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Hongkong
+    username: mysql
+    password: Abcd@1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.sudouki.vocabulary.domain
+

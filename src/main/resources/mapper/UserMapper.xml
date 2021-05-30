@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sudouki.vocabulary.mapper.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.sudouki.vocabulary.domain.User" >
+    <id column="id" property="id" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id
+  </sql>
+<!--  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >-->
+<!--    select -->
+<!--    <include refid="Base_Column_List" />-->
+<!--    from order_num-->
+<!--    where id = #{id,jdbcType=INTEGER}-->
+<!--  </select>-->
+<!--  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >-->
+<!--    delete from order_num-->
+<!--    where id = #{id,jdbcType=INTEGER}-->
+<!--  </delete>-->
+  <insert id="insert" parameterType="com.sudouki.vocabulary.domain.User" >
+
+    insert into user (id)
+    values (#{id,jdbcType=CHAR})
+  </insert>
+<!--  <insert id="insertSelective" parameterType="com.sudouki.vocabulary.domain.OrderNum" >-->
+<!--    insert into order_num-->
+<!--    <trim prefix="(" suffix=")" suffixOverrides="," >-->
+<!--      <if test="id != null" >-->
+<!--        id,-->
+<!--      </if>-->
+<!--      <if test="nu != null" >-->
+<!--        nu,-->
+<!--      </if>-->
+<!--      <if test="com != null" >-->
+<!--        com,-->
+<!--      </if>-->
+<!--    </trim>-->
+<!--    <trim prefix="values (" suffix=")" suffixOverrides="," >-->
+<!--      <if test="id != null" >-->
+<!--        #{id,jdbcType=INTEGER},-->
+<!--      </if>-->
+<!--      <if test="nu != null" >-->
+<!--        #{nu,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="com != null" >-->
+<!--        #{com,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--    </trim>-->
+<!--  </insert>-->
+<!--  <update id="updateByPrimaryKeySelective" parameterType="com.sudouki.vocabulary.domain.OrderNum" >-->
+<!--    update order_num-->
+<!--    <set >-->
+<!--      <if test="nu != null" >-->
+<!--        nu = #{nu,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--      <if test="com != null" >-->
+<!--        com = #{com,jdbcType=VARCHAR},-->
+<!--      </if>-->
+<!--    </set>-->
+<!--    where id = #{id,jdbcType=INTEGER}-->
+<!--  </update>-->
+<!--  <update id="updateByPrimaryKey" parameterType="com.sudouki.vocabulary.domain.OrderNum" >-->
+<!--    update order_num-->
+<!--    set nu = #{nu,jdbcType=VARCHAR},-->
+<!--      com = #{com,jdbcType=VARCHAR}-->
+<!--    where id = #{id,jdbcType=INTEGER}-->
+<!--  </update>-->
+</mapper>
